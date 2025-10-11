@@ -1,0 +1,11 @@
+# This file generates the GitHub Actions matrix
+# For simple boards, this is all you need
+# The board's name is the name of the board directory in ZMK
+# The shield's name is the name of the shield directory in ZMK
+---
+include:
+  - board: nice_nano_v2
+    shield: sofle_left
+  - board: nice_nano_v2
+    shield: sofle_right
+
