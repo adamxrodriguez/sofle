@@ -25,6 +25,14 @@
         };
     };
 
+    behaviors {
+    rot_pg: rot_pg {
+      compatible = "zmk,behavior-sensor-rotate";   // or "zmk,behavior-sensor-rotate-var"
+      #sensor-binding-cells = <0>;
+      bindings = <&kp PG_UP>, <&kp PG_DN>;         // CW -> PgUp, CCW -> PgDn
+    };
+  };
+
     keymap {
         compatible = "zmk,keymap";
 
