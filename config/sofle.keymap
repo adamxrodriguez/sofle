@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -119,11 +120,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans    &trans     &trans                  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                          &kp PG_UP        &trans          &kp UP    &trans     &trans                  &trans
-&trans      &trans        &trans        &trans        &trans        &kp CLCK                        &kp PG_DN        &kp LEFT        &kp DOWN  &kp RIGHT  &kp RA(RG(LEFT_ARROW))  &kp RA(RG(RIGHT_ARROW))
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans           &trans          &trans    &trans     &trans                  &to 0
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans           &trans          &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_TOG  &bl BL_ON  &trans                  &trans
+&trans      &trans        &trans        &trans        &trans        &trans                          &kp PG_UP        &trans          &kp UP           &trans     &trans                  &trans
+&trans      &trans        &trans        &trans        &trans        &kp CLCK                        &kp PG_DN        &kp LEFT        &kp DOWN         &kp RIGHT  &kp RA(RG(LEFT_ARROW))  &kp RA(RG(RIGHT_ARROW))
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans           &trans          &trans           &trans     &trans                  &to 0
+                          &trans        &trans        &trans        &trans        &trans    &trans  &trans           &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
